@@ -38,7 +38,7 @@ def get_sqr_list_second_number():
     print("all nums from txt", all_nums_list)
     second_list = [second_num]
     second_num_while = second_num
-    while second_num_while * second_num_while < max(all_nums_list):
+    while second_num_while * second_num_while <= max(all_nums_list):
         second_num_while = second_num_while * second_num_while
         second_list.append(second_num_while)
     result_second_list = sorted(list(set(all_nums_list) & set(second_list)))
@@ -52,7 +52,7 @@ def get_sqr_list_third_number():
     third_num = three_smallest_num[2]
     third_list = [third_num]
     second_num_while = third_num
-    while second_num_while * second_num_while < max(all_nums_list):
+    while second_num_while * second_num_while <= max(all_nums_list):
         second_num_while = second_num_while * second_num_while
         third_list.append(second_num_while)
     result_three_list = sorted(list(set(all_nums_list) & set(third_list)))
@@ -81,7 +81,8 @@ def construct_tree():
         index_third += 1
     for pre, fill, node in RenderTree(first_el):
         print("%s%s" % (pre, node.name))
-    DotExporter(first_el, nodeattrfunc=lambda node: "fixedsize=true, width=1, height=1, shape=box", edgeattrfunc=lambda parent, child: "style=bold").to_picture("tree.png")
+    DotExporter(first_el, nodeattrfunc=lambda node: "fixedsize=true, width=1, height=1, shape=box", edgeattrfunc=lambda parent, child: "style=bold").to_picture(
+        "images/tree.png")
     return True
 
 
@@ -89,5 +90,5 @@ def construct_tree():
 def result():
     # вывожу tree только для отображения дерева в кансоль
     tree = construct_tree()
-    filename = 'tree.png'
+    filename = 'images/tree.png'
     return send_file(filename, mimetype='image/gif')
