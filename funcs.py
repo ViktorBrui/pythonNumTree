@@ -3,6 +3,7 @@ from anytree.exporter import DotExporter
 from flask import send_file
 
 
+# парсим строку из txt фала
 def parsing_txt():
     file = open("numbers.txt", "r")
     if file:
@@ -11,6 +12,7 @@ def parsing_txt():
     return lines
 
 
+# получаем список элементов и превращаем их в int и сортируем
 def get_sorted_int_list():
     lines = parsing_txt()
     for line in lines:
@@ -21,12 +23,14 @@ def get_sorted_int_list():
     return setitems
 
 
+# получаем первые три наименьших элемента из отсортированного списка
 def get_three_smallest_num():
     items = get_sorted_int_list()
     three_item = items[0:3]
     return three_item
 
 
+# получаем список второго наименьшего элемента
 def get_sqr_list_second_number():
     all_nums_list = get_sorted_int_list()
     three_smallest_num = get_three_smallest_num()
@@ -41,6 +45,7 @@ def get_sqr_list_second_number():
     return result_second_list
 
 
+# получаем список третьего наименьшего элемента
 def get_sqr_list_third_number():
     all_nums_list = get_sorted_int_list()
     three_smallest_num = get_three_smallest_num()
@@ -54,6 +59,7 @@ def get_sqr_list_third_number():
     return result_three_list
 
 
+# создание дерева и отрисовка его с помощью DotExporter
 def construct_tree():
     setitems = get_sorted_int_list()
     second_items = get_sqr_list_second_number()
@@ -79,7 +85,9 @@ def construct_tree():
     return True
 
 
+# функция выведения картинки во view
 def result():
+    # вывожу tree только для отображения дерева в кансоль
     tree = construct_tree()
     filename = 'tree.png'
     return send_file(filename, mimetype='image/gif')
