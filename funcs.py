@@ -12,7 +12,7 @@ def parsing_txt():
     return lines
 
 
-# получаем список элементов и превращаем их в int и сортируем
+# получаем список элементов и превращаем их в int
 def get_sorted_int_list():
     lines = parsing_txt()
     for line in lines:
@@ -30,7 +30,7 @@ def get_three_smallest_num():
     return three_item
 
 
-# получаем список второго наименьшего элемента
+# получаем список чисел для узла второго наименьшего элемента
 def get_sqr_list_second_number():
     all_nums_list = get_sorted_int_list()
     three_smallest_num = get_three_smallest_num()
@@ -45,7 +45,7 @@ def get_sqr_list_second_number():
     return result_second_list
 
 
-# получаем список третьего наименьшего элемента
+# получаем список чисел для узла третьего наименьшего элемента
 def get_sqr_list_third_number():
     all_nums_list = get_sorted_int_list()
     three_smallest_num = get_three_smallest_num()
