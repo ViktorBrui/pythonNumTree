@@ -1,0 +1,15 @@
+openapi: 3.0.2
+info:
+  title: Image Tree
+  description: Construct image num-tree.
+  version: 1.0.0
+
+paths:
+  /:
+    get:
+      description: Construct image num-tree.
+      operationId: runserv.create_app
+      responses:
+        200:
+          description: Successfully
+
