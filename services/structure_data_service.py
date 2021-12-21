@@ -1,7 +1,7 @@
 from services.reader_txt_service import TxtReader
 import logging
 logging.basicConfig(level=logging.INFO, filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %('
-                                                                                 'message)s')
+                                                                                 'message)s', datefmt="%a, %d %b %Y %H:%M:%S +0000")
 
 
 class DataLists:

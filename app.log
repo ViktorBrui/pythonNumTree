@@ -1,5 +1,13 @@
+connexion.options - WARNING - The swagger_ui directory could not be found.
+    Please install connexion with extra install: pip install connexion[swagger-ui]
+    or provide the path to your local installation by passing swagger_path=<your path>
+
+connexion.options - WARNING - The swagger_ui directory could not be found.
+    Please install connexion with extra install: pip install connexion[swagger-ui]
+    or provide the path to your local installation by passing swagger_path=<your path>
+
 werkzeug - WARNING -  * Debugger is active!
-werkzeug - INFO -  * Debugger PIN: 291-118-231
+werkzeug - INFO -  * Debugger PIN: 367-626-133
 root - WARNING - node columns is empty
 root - WARNING - node columns is empty
 root - WARNING - node columns is empty
@@ -12,7 +20,7 @@ root - WARNING - node_list is empty
 root - WARNING - Node is empty
 root - WARNING - Node is empty
 root - WARNING - Node is empty
-werkzeug - INFO - 127.0.0.1 - - [21/Dec/2021 18:27:40] "[37mGET /tree HTTP/1.1[0m" 200 -
+werkzeug - INFO - 127.0.0.1 - - [21/Dec/2021 19:06:56] "[37mGET /tree HTTP/1.1[0m" 200 -
 root - WARNING - node columns is empty
 root - WARNING - node columns is empty
 root - WARNING - node columns is empty
@@ -25,30 +33,4 @@ root - WARNING - node_list is empty
 root - WARNING - Node is empty
 root - WARNING - Node is empty
 root - WARNING - Node is empty
-werkzeug - INFO - 127.0.0.1 - - [21/Dec/2021 18:27:42] "[37mGET /tree HTTP/1.1[0m" 200 -
-root - WARNING - node columns is empty
-root - WARNING - node columns is empty
-root - WARNING - node columns is empty
-root - WARNING - node columns is empty
-root - WARNING - node columns is empty
-root - WARNING - node_list is empty
-root - WARNING - Node is empty
-root - WARNING - Node is empty
-root - WARNING - node_list is empty
-root - WARNING - Node is empty
-root - WARNING - Node is empty
-root - WARNING - Node is empty
-werkzeug - INFO - 127.0.0.1 - - [21/Dec/2021 18:27:42] "[37mGET /tree HTTP/1.1[0m" 200 -
-root - WARNING - node columns is empty
-root - WARNING - node columns is empty
-root - WARNING - node columns is empty
-root - WARNING - node columns is empty
-root - WARNING - node columns is empty
-root - WARNING - node_list is empty
-root - WARNING - Node is empty
-root - WARNING - Node is empty
-root - WARNING - node_list is empty
-root - WARNING - Node is empty
-root - WARNING - Node is empty
-root - WARNING - Node is empty
-werkzeug - INFO - 127.0.0.1 - - [21/Dec/2021 18:27:43] "[37mGET /tree HTTP/1.1[0m" 200 -
+werkzeug - INFO - 127.0.0.1 - - [21/Dec/2021 19:07:43] "[37mGET /tree HTTP/1.1[0m" 200 -
