@@ -1,4 +1,4 @@
-from services.readTxtService import TxtReader
+from services.reader_txt_service import TxtReader
 import logging
 logging.basicConfig(level=logging.INFO, filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %('
                                                                                  'message)s')
@@ -15,7 +15,7 @@ class DataLists:
         setitems = [int(i) for i in setitems if i.isdigit()]
         return setitems
 
-    def get_lists(self, input_num=23) -> list:
+    def get_lists(self, input_num=21) -> list:
         if input_num > 1:
             input_nums = [int(i) for i in range(2, input_num+1)]
             print('some list', input_nums)

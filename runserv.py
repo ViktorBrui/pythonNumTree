@@ -1,11 +1,9 @@
 import connexion
 from flask import send_file
-from services.treeConstruct import TreeConstruct
+from services.tree_construct_service import TreeConstruct
 
 
 def create_app():
-    construct_tree = TreeConstruct()
-    tree = construct_tree.old_construct_tree()
     filename = 'images/tree.png'
     return send_file(filename, mimetype='image/gif')
 

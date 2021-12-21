@@ -1,6 +1,6 @@
 from anytree import Node, RenderTree
 from anytree.exporter import DotExporter
-from services.dataService import DataLists
+from services.structure_data_service import DataLists
 import logging
 logging.basicConfig(level=logging.INFO, filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %('
                                                                                  'message)s')
