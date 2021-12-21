@@ -121,3 +121,33 @@ root - WARNING - node_list is empty
 root - WARNING - node_list is empty
 werkzeug - INFO - 127.0.0.1 - - [21/Dec/2021 17:52:16] "[37mGET /tree HTTP/1.1[0m" 200 -
 werkzeug - INFO - 127.0.0.1 - - [21/Dec/2021 17:52:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+root - WARNING - node columns is empty
+root - WARNING - node columns is empty
+root - WARNING - node columns is empty
+root - WARNING - node columns is empty
+root - WARNING - node columns is empty
+root - WARNING - node_list is empty
+root - WARNING - Node is empty
+root - WARNING - Node is empty
+root - WARNING - node_list is empty
+root - WARNING - Node is empty
+root - WARNING - Node is empty
+root - WARNING - Node is empty
+root - WARNING - node_list is empty
+root - WARNING - node_list is empty
+werkzeug - INFO - 127.0.0.1 - - [21/Dec/2021 17:58:06] "[37mGET /tree HTTP/1.1[0m" 200 -
+root - WARNING - node columns is empty
+root - WARNING - node columns is empty
+root - WARNING - node columns is empty
+root - WARNING - node columns is empty
+root - WARNING - node columns is empty
+root - WARNING - node_list is empty
+root - WARNING - Node is empty
+root - WARNING - Node is empty
+root - WARNING - node_list is empty
+root - WARNING - Node is empty
+root - WARNING - Node is empty
+root - WARNING - Node is empty
+root - WARNING - node_list is empty
+root - WARNING - node_list is empty
+werkzeug - INFO - 127.0.0.1 - - [21/Dec/2021 17:58:07] "[37mGET /tree HTTP/1.1[0m" 200 -
