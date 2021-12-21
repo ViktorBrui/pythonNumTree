@@ -5,11 +5,17 @@ info:
   version: 1.0.0
 
 paths:
-  /:
+  /tree:
     get:
       description: Construct image num-tree.
+      operationId: runserv.create_tree
+      responses:
+        200:
+          description: Successfully
+  /home:
+    get:
+      description: create app.
       operationId: runserv.create_app
       responses:
         200:
           description: Successfully
-
