@@ -8,14 +8,14 @@ paths:
   /tree:
     get:
       description: Construct image num-tree.
-      operationId: runserv.create_tree
+      operationId: main.create_tree
       responses:
         200:
           description: Successfully
   /home:
     get:
       description: create app.
-      operationId: runserv.create_app
+      operationId: main.create_app
       responses:
         200:
           description: Successfully

@@ -1,17 +1,16 @@
-import logging
-logging.basicConfig(level=logging.INFO, filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %('
-                                                                                 'message)s')
+from services.logger import logger_instance
 
 
 class TxtReader:
 
-    @staticmethod
-    def read_txt():
-        file = open("numbers.txt", "r")
-        if file:
-            lines = file.readlines()
-            file.close()
-            return lines
-        else:
-            logging.warning('File is clear...')
+    def read_txt(self, input_file="numbers.txt"):
+        with open(input_file, encoding='utf-8') as file:
+
+            if file:
+                lines = file.readlines()
+                return lines
+
+            else:
+                logger_instance.log_warning(self.__class__.__name__ + ' - class, Something wrong...')
+
 

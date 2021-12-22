@@ -1,36 +1,14 @@
-connexion.options - WARNING - The swagger_ui directory could not be found.
-    Please install connexion with extra install: pip install connexion[swagger-ui]
-    or provide the path to your local installation by passing swagger_path=<your path>
-
-connexion.options - WARNING - The swagger_ui directory could not be found.
-    Please install connexion with extra install: pip install connexion[swagger-ui]
-    or provide the path to your local installation by passing swagger_path=<your path>
-
-werkzeug - WARNING -  * Debugger is active!
-werkzeug - INFO -  * Debugger PIN: 367-626-133
-root - WARNING - node columns is empty
-root - WARNING - node columns is empty
-root - WARNING - node columns is empty
-root - WARNING - node columns is empty
-root - WARNING - node columns is empty
-root - WARNING - node_list is empty
-root - WARNING - Node is empty
-root - WARNING - Node is empty
-root - WARNING - node_list is empty
-root - WARNING - Node is empty
-root - WARNING - Node is empty
-root - WARNING - Node is empty
-werkzeug - INFO - 127.0.0.1 - - [21/Dec/2021 19:06:56] "[37mGET /tree HTTP/1.1[0m" 200 -
-root - WARNING - node columns is empty
-root - WARNING - node columns is empty
-root - WARNING - node columns is empty
-root - WARNING - node columns is empty
-root - WARNING - node columns is empty
-root - WARNING - node_list is empty
-root - WARNING - Node is empty
-root - WARNING - Node is empty
-root - WARNING - node_list is empty
-root - WARNING - Node is empty
-root - WARNING - Node is empty
-root - WARNING - Node is empty
-werkzeug - INFO - 127.0.0.1 - - [21/Dec/2021 19:07:43] "[37mGET /tree HTTP/1.1[0m" 200 -
+root - WARNING - TreeConstruct - node list index = 13 is empty - 22 Dec 2021 11:53:36 
+root - WARNING - TreeConstruct - node list index = 14 is empty - 22 Dec 2021 11:53:36 
+root - WARNING - TreeConstruct - node list index = 17 is empty - 22 Dec 2021 11:53:36 
+root - WARNING - TreeConstruct - node list index = 18 is empty - 22 Dec 2021 11:53:36 
+root - WARNING - TreeConstruct - node list index = 19 is empty - 22 Dec 2021 11:53:36 
+root - WARNING - TreeConstruct - node_list is empty - 22 Dec 2021 11:53:36 
+root - WARNING - TreeConstruct - Node 13 is empty - 22 Dec 2021 11:53:36 
+root - WARNING - TreeConstruct - Node 14 is empty - 22 Dec 2021 11:53:36 
+root - WARNING - TreeConstruct - node_list is empty - 22 Dec 2021 11:53:36 
+root - WARNING - TreeConstruct - Node 17 is empty - 22 Dec 2021 11:53:36 
+root - WARNING - TreeConstruct - Node 18 is empty - 22 Dec 2021 11:53:36 
+root - WARNING - TreeConstruct - Node 19 is empty - 22 Dec 2021 11:53:36 
+root - WARNING - TreeConstruct - node_list is empty - 22 Dec 2021 11:53:36 
+werkzeug - INFO - 127.0.0.1 - - [22/Dec/2021 11:53:36] "[37mGET /tree HTTP/1.1[0m" 200 - - 22 Dec 2021 11:53:36 

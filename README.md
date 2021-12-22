@@ -1,4 +1,4 @@
 # pythonNumTree
 
 ## Start project:
-`python runserv.py`
+`python main.py`

@@ -1,35 +1,39 @@
 from services.reader_txt_service import TxtReader
-import logging
-logging.basicConfig(level=logging.INFO, filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %('
-                                                                                 'message)s', datefmt="%a, %d %b %Y %H:%M:%S +0000")
+from services.logger import logger_instance
 
 
-class DataLists:
-    @staticmethod
-    def get_sorted_int_list() -> list:
+class StructureData:
+
+    def get_sorted_int_list(self) -> list:
         parsing_lines = TxtReader()
         lines = parsing_lines.read_txt()
+
         for line in lines:
             items = line.split()
         setitems = set(items)
         setitems = [int(i) for i in setitems if i.isdigit()]
+
         return setitems
 
-    def get_lists(self, input_num=21) -> list:
+    def get_lists(self, input_num=22) -> list:
         if input_num > 1:
             input_nums = [int(i) for i in range(2, input_num+1)]
-            print('some list', input_nums)
             all_num_list = self.get_sorted_int_list()
-            result_data = []
+            data_tree = []
+
             for i in input_nums:
                 list_items = [i]
                 num_while = i
+
                 while num_while * num_while <= max(all_num_list):
                     num_while = num_while * num_while
                     list_items.append(num_while)
+
                 result_list = sorted(list(set(all_num_list) & set(list_items)))
-                result_data.append(result_list)
-            print('result_list', result_data)
-            return result_data
+                data_tree.append(result_list)
+
+            return data_tree
+
         else:
-            logging.warning('Input number is <= 1')
+            logger_instance.log_warning(self.__class__.__name__ + ' - Input number is <= 1!')
+
