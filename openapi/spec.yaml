@@ -12,10 +12,16 @@ paths:
       responses:
         200:
           description: Successfully
-  /home:
+  /:
     get:
       description: create app.
       operationId: main.create_app
       responses:
         200:
           description: Successfully
+    post:
+      description: upload file.
+      operationId: main.upload_and_create_tree
+      responses:
+        200:
+          description: Uploads successfully

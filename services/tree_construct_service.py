@@ -1,15 +1,15 @@
 from anytree import Node, RenderTree
 from anytree.exporter import DotExporter
-from services.structure_data_service import StructureData
+from services.structure_data_service import StructureDataService
 from services.logger import logger_instance
 
 
-class TreeConstruct:
+class TreeConstructService:
+    tree_data = StructureDataService()
 
-    def create_tree(self) -> list:
-        tree_return = self.construct_tree()
-
-        return tree_return
+    def create_tree(self, node_count) -> list:
+        build_tree = self.construct_tree(node_count)
+        return build_tree
 
     def create_next_level_nodes(self, node_list, parent_node, has_parent=False) -> list:
         second_nodes_list = []
@@ -26,10 +26,9 @@ class TreeConstruct:
         else:
             logger_instance.log_warning(self.__class__.__name__ + ' - node_list is empty')
 
-    def construct_tree(self) -> list:
-        tree_data = StructureData()
-        items_sets = tree_data.get_lists()
-        setitems = tree_data.get_sorted_int_list()
+    def construct_tree(self, node_count) -> list:
+        items_sets = self.tree_data.get_lists(node_count)
+        setitems = self.tree_data.get_sorted_int_list()
         first_node_level = Node(min(setitems), parent=None)
         next_node_level = []
 
@@ -41,22 +40,19 @@ class TreeConstruct:
                 if node_columns:
                     next_node_level.append(node_columns[0])
 
-
                 elif not node_columns:
                     current_node_index = str(node_index)
-                    logger_instance.log_warning(self.__class__.__name__ + ' - node list index = ' + current_node_index + ' is empty')
+                    logger_instance.log_warning(self.__class__.__name__ + ' - node list index = ' + current_node_index + ' - is empty')
                     next_node_level.append('')
 
-            second_node_level_origin = self.create_next_level_nodes(next_node_level, first_node_level)
+            second_node_level = self.create_next_level_nodes(next_node_level, first_node_level)
             index = 0
 
-            for next_node in second_node_level_origin:
-
+            for next_node in second_node_level:
                 if not items_sets[index]:
                     index += 1
                     node_index = str(index + 1)
                     logger_instance.log_warning(self.__class__.__name__ + ' - Node ' + node_index + ' is empty')
-                    pass
 
                 else:
                     items_sets[index].pop(0)
@@ -66,17 +62,13 @@ class TreeConstruct:
             draw_nodes = self.draw_image_png(first_node_level)
 
             return draw_nodes
-
         else:
             logger_instance.log_warning(self.__class__.__name__ + ' - Input number is < 2 or items_sets is empty')
 
     def draw_image_png(self, first_node) -> bool:
         for pre, fill, node in RenderTree(first_node):
             print("%s%s" % (pre, node.name))
-        DotExporter(first_node, nodeattrfunc=lambda node: "fixedsize=true, width=1, height=1, shape=box",
+        DotExporter(first_node, nodeattrfunc=lambda node: "fixedsize=true, width=1.25, height=1.25, shape=box",
                     edgeattrfunc=lambda parent, child: "style=bold").to_picture(
             "images/new-tree.png")
         return True
-
-
-

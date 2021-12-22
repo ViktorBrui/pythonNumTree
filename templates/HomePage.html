@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home page</title>
+</head>
+<body class="body" style="background: #c9c9c9;">
+    <div class="container" style="display:flex; justify-content: center; align-items:center; padding: 20%">
+        <h1>Загрузить .txt файл</h1>
+        <form method=post enctype=multipart/form-data>
+          <input type=file name=file>
+          <p>Заполните число до которого нужно вывести квадрат их узлов из загруженного файла, знчение должно быть не менее 2</p>
+          <input type=text name=nodeCount>
+          <input type=submit value=Upload>
+        </form>
+    </div>
+
+</body>
+</html>

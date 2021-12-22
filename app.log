@@ -1,14 +1,13 @@
-root - WARNING - TreeConstruct - node list index = 13 is empty - 22 Dec 2021 11:53:36 
-root - WARNING - TreeConstruct - node list index = 14 is empty - 22 Dec 2021 11:53:36 
-root - WARNING - TreeConstruct - node list index = 17 is empty - 22 Dec 2021 11:53:36 
-root - WARNING - TreeConstruct - node list index = 18 is empty - 22 Dec 2021 11:53:36 
-root - WARNING - TreeConstruct - node list index = 19 is empty - 22 Dec 2021 11:53:36 
-root - WARNING - TreeConstruct - node_list is empty - 22 Dec 2021 11:53:36 
-root - WARNING - TreeConstruct - Node 13 is empty - 22 Dec 2021 11:53:36 
-root - WARNING - TreeConstruct - Node 14 is empty - 22 Dec 2021 11:53:36 
-root - WARNING - TreeConstruct - node_list is empty - 22 Dec 2021 11:53:36 
-root - WARNING - TreeConstruct - Node 17 is empty - 22 Dec 2021 11:53:36 
-root - WARNING - TreeConstruct - Node 18 is empty - 22 Dec 2021 11:53:36 
-root - WARNING - TreeConstruct - Node 19 is empty - 22 Dec 2021 11:53:36 
-root - WARNING - TreeConstruct - node_list is empty - 22 Dec 2021 11:53:36 
-werkzeug - INFO - 127.0.0.1 - - [22/Dec/2021 11:53:36] "[37mGET /tree HTTP/1.1[0m" 200 - - 22 Dec 2021 11:53:36 
+root - WARNING - TreeConstructService - node list index = 13 - is empty - 22 Dec 2021 18:30:23 
+root - WARNING - TreeConstructService - node list index = 14 - is empty - 22 Dec 2021 18:30:23 
+root - WARNING - TreeConstructService - node list index = 17 - is empty - 22 Dec 2021 18:30:23 
+root - WARNING - TreeConstructService - node list index = 18 - is empty - 22 Dec 2021 18:30:23 
+root - WARNING - TreeConstructService - node list index = 19 - is empty - 22 Dec 2021 18:30:23 
+root - WARNING - TreeConstructService - node_list is empty - 22 Dec 2021 18:30:23 
+root - WARNING - TreeConstructService - Node 13 is empty - 22 Dec 2021 18:30:23 
+root - WARNING - TreeConstructService - Node 14 is empty - 22 Dec 2021 18:30:23 
+root - WARNING - TreeConstructService - node_list is empty - 22 Dec 2021 18:30:23 
+root - WARNING - TreeConstructService - Node 17 is empty - 22 Dec 2021 18:30:23 
+root - WARNING - TreeConstructService - Node 18 is empty - 22 Dec 2021 18:30:23 
+root - WARNING - TreeConstructService - Node 19 is empty - 22 Dec 2021 18:30:23 
+werkzeug - INFO - 127.0.0.1 - - [22/Dec/2021 18:30:23] "[37mPOST / HTTP/1.1[0m" 200 - - 22 Dec 2021 18:30:23 

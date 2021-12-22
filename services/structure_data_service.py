@@ -1,21 +1,22 @@
-from services.reader_txt_service import TxtReader
+from services.txt_reader import TxtReader
 from services.logger import logger_instance
 
 
-class StructureData:
+class StructureDataService:
+    parsing_lines = TxtReader()
 
     def get_sorted_int_list(self) -> list:
-        parsing_lines = TxtReader()
-        lines = parsing_lines.read_txt()
+        lines = self.parsing_lines.read_txt()
 
         for line in lines:
             items = line.split()
+
         setitems = set(items)
         setitems = [int(i) for i in setitems if i.isdigit()]
 
         return setitems
 
-    def get_lists(self, input_num=22) -> list:
+    def get_lists(self, input_num) -> list:
         if input_num > 1:
             input_nums = [int(i) for i in range(2, input_num+1)]
             all_num_list = self.get_sorted_int_list()
@@ -33,7 +34,5 @@ class StructureData:
                 data_tree.append(result_list)
 
             return data_tree
-
         else:
             logger_instance.log_warning(self.__class__.__name__ + ' - Input number is <= 1!')
-
