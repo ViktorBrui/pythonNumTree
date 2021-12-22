@@ -1,4 +1,4 @@
-from services.txt_reader import TxtReader
+from services.reader import TxtReader
 from services.logger import logger_instance
 
 
