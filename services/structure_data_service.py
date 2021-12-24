@@ -1,12 +1,17 @@
+from services.parser import TxtParser
 from services.reader import TxtReader
 from services.logger import logger_instance
 
 
 class StructureDataService:
     parsing_lines = TxtReader()
+    list_data_from_file = TxtParser()
 
     def get_sorted_int_list(self) -> list:
-        lines = self.parsing_lines.read_txt()
+
+        lines = self.list_data_from_file.file_data_list
+        # read from file
+        # lines = self.parsing_lines.read_txt()
 
         for line in lines:
             items = line.split()
@@ -18,7 +23,7 @@ class StructureDataService:
 
     def get_lists(self, input_num) -> list:
         if input_num > 1:
-            input_nums = [int(i) for i in range(2, input_num+1)]
+            input_nums = range(2, input_num+1)
             all_num_list = self.get_sorted_int_list()
             data_tree = []
 

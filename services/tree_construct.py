@@ -4,7 +4,7 @@ from services.structure_data_service import StructureDataService
 from services.logger import logger_instance
 
 
-class TreeConstructService:
+class TreeConstruct:
     tree_data = StructureDataService()
 
     def create_tree(self, node_count) -> list:
@@ -26,7 +26,7 @@ class TreeConstructService:
         else:
             logger_instance.log_warning(self.__class__.__name__ + ' - node_list is empty')
 
-    def construct_tree(self, node_count) -> list:
+    def construct_tree(self, node_count) -> bool:
         items_sets = self.tree_data.get_lists(node_count)
         setitems = self.tree_data.get_sorted_int_list()
         first_node_level = Node(min(setitems), parent=None)
@@ -70,5 +70,5 @@ class TreeConstructService:
             print("%s%s" % (pre, node.name))
         DotExporter(first_node, nodeattrfunc=lambda node: "fixedsize=true, width=1.25, height=1.25, shape=box",
                     edgeattrfunc=lambda parent, child: "style=bold").to_picture(
-            "images/new-tree.png")
+            "images/tree.png")
         return True

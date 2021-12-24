@@ -1,10 +1,13 @@
 import connexion
 from flask import send_file
-from services.tree_construct_service import TreeConstructService
+from services.reader import TxtReader
+from services.tree_construct import TreeConstruct
 from services.parser import TxtParser
 
 parser = TxtParser()
-construct_tree = TreeConstructService()
+reader = TxtReader()
+construct_tree = TreeConstruct()
+image_filename = 'images/tree.png'
 
 
 def create_app():
@@ -13,18 +16,27 @@ def create_app():
 
 
 def upload_and_create_tree():
-    log = parser.parser_txt_file()
-    print("log", log)
-    nodes_count = parser.get_nodes_count_from_page()
-    construct_tree.create_tree(nodes_count)
-    filename = 'images/new-tree.png'
-    return send_file(filename, mimetype='image/gif')
+    uploads_count_nodes()
+    return send_file(image_filename, mimetype='image/gif')
 
 
 def create_tree():
-    tree = construct_tree.create_tree(7)
-    filename = 'images/new-tree.png'
-    return send_file(filename, mimetype='image/gif')
+    tree = construct_tree.create_tree(5)
+    return send_file(image_filename, mimetype='image/gif')
+
+
+def upload_txt_file_to_storage():
+    file = connexion.request.files['txtFile']
+    file.seek(0)
+    filename = file.filename
+    parser.get_txt_file_data(file.read(), filename)
+    return file
+
+
+def uploads_count_nodes():
+    count_nodes = connexion.request.form['countNodes']
+    upload_txt_file_to_storage()
+    construct_tree.create_tree(int(count_nodes))
 
 
 if __name__ == '__main__':

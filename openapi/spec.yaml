@@ -22,6 +22,25 @@ paths:
     post:
       description: upload file.
       operationId: main.upload_and_create_tree
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [ 'txtFile', 'countNodes' ]
+              properties:
+                txtFile:
+                  type: string
+                  format: binary
+                countNodes:
+                  type: string
       responses:
         200:
-          description: Uploads successfully
+          description: File uploaded successfully
+          content:
+            'application/json':
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
